@@ -3,8 +3,9 @@ module.exports = async function (context, req) {
 
     context.res = {
         // status: 200, /* Defaults to 200 */
-        body: "Hello "
+        body: "Hello " + context.bindingData.path
     };
+
     // if (req.query.name || (req.body && req.body.name)) {
     //     context.res = {
     //         // status: 200, /* Defaults to 200 */
